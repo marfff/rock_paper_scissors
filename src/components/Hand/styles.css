@@ -1,0 +1,47 @@
+.paper {
+  background: linear-gradient(0deg, #f3f3f3 0%, #dadada 98.34%);
+  stroke-width: 4px;
+}
+
+.scissors {
+  background: linear-gradient(0deg, #f3f3f3 0%, #dadada 98.34%);
+  stroke-width: 4px;
+}
+
+.rock {
+  background: linear-gradient(0deg, #f3f3f3 0%, #dadada 98.34%);
+  stroke-width: 4px;
+}
+
+.disk1button {
+  width: 129.37px;
+  height: 126.78px;
+  background: linear-gradient(0deg, #f3f3f3 0%, #dadada 98.34%);
+  border-radius: 50%;
+  border-width: 10px;
+  border: 15px solid #4664f4;
+  /* background: #2a45c2; */
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+}
+
+.disk2button {
+  width: 129.37px;
+  height: 126.78px;
+  background: linear-gradient(0deg, #f3f3f3 0%, #dadada 98.34%);
+  border-radius: 50%;
+  border-width: 10px;
+  border: 15px solid #eb9f0e;
+  /* background: #c76c1b; */
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+}
+
+.disk3button {
+  width: 129.37px;
+  height: 126.78px;
+  background: linear-gradient(0deg, #f3f3f3 0%, #dadada 98.34%);
+  border-radius: 50%;
+  border-width: 10px;
+  border: 15px solid #db2e4d;
+  /* background: #9d1634; */
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+}

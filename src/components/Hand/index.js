@@ -7,14 +7,12 @@ import './styles.css';
 
 export default function Hand(props) {
   const { shape, onHandClick } = props;
-  // console.log("HAND PROPS",props)
 
   const handleClick = (event) => {
     event.preventDefault();
-    // console.log("clickedevent",event)
     onHandClick(shape);
   };
-  
+
   switch (shape) {
     case 'paper':
       return (
@@ -36,15 +34,6 @@ export default function Hand(props) {
           <Rock className='rock' />
         </button>
       );
-    
-      // case 'oval1':
-      //   return (
-      //     <button className='disk3button' onClick={handleClick}>
-      //       <Rock className='rock' />
-      //     </button>
-      //   );
-    
-    
 
     default:
       return null;

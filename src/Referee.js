@@ -5,26 +5,21 @@ import { increment, decrement } from './gameSlice';
 const Referee = () => {
   const compHand = useSelector((state) => state.game.player2);
   const userHand = useSelector((state) => state.game.player1);
-  const score = useSelector((state) => state.game.score);
   console.log('HANDS', userHand, compHand);
 
   const dispatch = useDispatch();
-
-  const [winner1, setWinner1] = useState('');
-  const [counter, setCounter] = useState(0);
   const [outcome, setOutcome] = useState('?');
 
   useEffect(() => {
-    if ((userHand == 'scissors') & (compHand == 'paper')) {
-      setOutcome('YOU WIN');
-      dispatch(increment());
-      console.log(outcome, counter);
-    }
-    if ((userHand == 'paper') & (compHand == 'rock')) {
+    if ((userHand === 'scissors') & (compHand === 'paper')) {
       setOutcome('YOU WIN');
       dispatch(increment());
     }
-    if ((userHand == 'rock') & (compHand == 'scissors')) {
+    if ((userHand === 'paper') & (compHand === 'rock')) {
+      setOutcome('YOU WIN');
+      dispatch(increment());
+    }
+    if ((userHand === 'rock') & (compHand === 'scissors')) {
       setOutcome('YOU WIN');
       dispatch(increment());
     }
@@ -32,27 +27,24 @@ const Referee = () => {
       setOutcome('DRAW');
     }
 
-    if ((compHand == 'scissors') & (userHand == 'paper')) {
+    if ((compHand === 'scissors') & (userHand === 'paper')) {
       setOutcome('YOU LOSE');
       dispatch(decrement());
     }
-    if ((compHand == 'paper') & (userHand == 'rock')) {
+    if ((compHand === 'paper') & (userHand === 'rock')) {
       setOutcome('YOU LOSE');
       dispatch(decrement());
     }
-    if ((compHand == 'rock') & (userHand == 'scissors')) {
+    if ((compHand === 'rock') & (userHand === 'scissors')) {
       setOutcome('YOU LOSE');
       dispatch(decrement());
     }
   }, [compHand]);
 
-  //   dispatch(setScore(counter));
-
   return (
     <div className='referee'>
-          {compHand && <h1 className='youwin'>{outcome}</h1>}
-      
-      {/* <div className='counter1'></div> */}
+      {compHand && <h1 className='youwin'>{outcome}</h1>}
+
     </div>
   );
 };

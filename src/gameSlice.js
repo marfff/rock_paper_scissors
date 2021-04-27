@@ -15,7 +15,7 @@ export const gameSlice = createSlice({
       let items = ['paper', 'rock', 'scissors'];
       let randno = Math.floor(Math.random() * 3);
       let itemchoose = items[randno];
-      // setTimeout(() => dispatch(setComputerHAnd(cpHand)), 500)
+
       state.player2 = itemchoose;
     },
     increment: (state) => {
@@ -29,7 +29,6 @@ export const gameSlice = createSlice({
 
 export default gameSlice.reducer;
 
-// Action creators are generated for each case reducer function
 export const {
   setPlayer1,
   setPlayer2,

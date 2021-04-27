@@ -2,7 +2,6 @@ import Hand from './components/Hand';
 import { useSelector, useDispatch } from 'react-redux';
 import { setPlayer1, setPlayer2 } from './gameSlice';
 import { setScreen } from './navigationSlice';
-import { useState } from 'react';
 
 function HandContainer(props) {
   const screen = useSelector((state) => state.navigation.screen);
@@ -32,31 +31,3 @@ function HandContainer(props) {
 }
 
 export default HandContainer;
-/* <div className disk1>
-        <div className='disk1'>
-          <Hand shape='paper' onHandClick={onHandClick} />
-        </div>
-
-        <div className='disk2'>
-          <Hand shape='rock' onHandClick={onHandClick} />
-        </div>
-
-        <div className='disk3'>
-          <Hand shape='scissors' onHandClick={onHandClick} />
-        </div> */
-
-/* Contest screen
-        <div className='player1'>
-          <div className='disk1'>
-            <Hand shape={player1} onHandClick={() => null} />
-          </div>
-        </div>
-
-        <div className='player2'>
-          <div className='disk1'>
-            <Hand shape={player2} onHandClick={() => null} />
-          </div>
-        </div>
-        {/* Contest screen END */
-// </div>
-// <div className disk2></div>

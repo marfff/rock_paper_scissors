@@ -1,4 +1,8 @@
+import { useSelector} from 'react-redux';
+
 function TopScore() {
+  const score = useSelector((state) => state.game.score);
+
   return (
     <div className='scores'>
       <div className='title1'>
@@ -8,7 +12,7 @@ function TopScore() {
       </div>
       <div className='scorebox'>
         <span className='scoretext'>SCORE</span>
-        <span className='scorefinal'>15</span>
+        <span className='scorefinal'>{score}</span>
       </div>
     </div>
   );

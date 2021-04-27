@@ -5,6 +5,7 @@ export const gameSlice = createSlice({
   initialState: {
     player1: null,
     player2: null,
+    score: 0
   },
   reducers: {
     setPlayer1: (state, action) => {
@@ -14,7 +15,15 @@ export const gameSlice = createSlice({
       let items = ['paper', 'rock', 'scissors'];
       let randno = Math.floor(Math.random() * 3);
       let itemchoose = items[randno];
+      // setTimeout(() => dispatch(setComputerHAnd(cpHand)), 500)
       state.player2 = itemchoose;
+    },
+    increment: (state) => {
+      state.score += 1;
+      console.log("STATESCORE",state.score)
+    },
+    decrement: (state) => {
+      state.score -= 1;
     },
   },
 });
@@ -22,4 +31,4 @@ export const gameSlice = createSlice({
 export default gameSlice.reducer;
 
 // Action creators are generated for each case reducer function
-export const { setPlayer1, setPlayer2 } = gameSlice.actions;
+export const { setPlayer1, setPlayer2, increment, decrement } = gameSlice.actions;

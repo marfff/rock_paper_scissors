@@ -36,6 +36,15 @@ export default function Hand(props) {
           <Rock className='rock' />
         </button>
       );
+    
+      // case 'oval1':
+      //   return (
+      //     <button className='disk3button' onClick={handleClick}>
+      //       <Rock className='rock' />
+      //     </button>
+      //   );
+    
+    
 
     default:
       return null;

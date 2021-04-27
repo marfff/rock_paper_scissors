@@ -14,7 +14,7 @@ function HandContainer(props) {
 
   const onHandClick = (newShape) => {
     dispatch(setPlayer1(newShape));
-    dispatch(setPlayer2());
+    setTimeout(() => dispatch(setPlayer2()),1000);
     dispatch(setScreen('competition'));
     // dispatch(setScreen("start"))
 

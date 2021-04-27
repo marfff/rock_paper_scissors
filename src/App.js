@@ -6,6 +6,7 @@ import CompContainer from './CompContainer';
 import { useState } from 'react';
 import { setPlayer1, setPlayer2, setScreen } from './gameSlice';
 import { useSelector, useDispatch } from 'react-redux';
+import Referee from './Referee';
 
 function App() {
   const screen = useSelector((state) => state.game.screen);
@@ -17,6 +18,7 @@ function App() {
       <TopScore />
       <CompContainer />
       <HandContainer />
+      <Referee/>
     </div>
   );
 }

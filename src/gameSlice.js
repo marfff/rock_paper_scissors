@@ -5,7 +5,7 @@ export const gameSlice = createSlice({
   initialState: {
     player1: null,
     player2: null,
-    score: 0
+    score: 0,
   },
   reducers: {
     setPlayer1: (state, action) => {
@@ -20,7 +20,6 @@ export const gameSlice = createSlice({
     },
     increment: (state) => {
       state.score += 1;
-      console.log("STATESCORE",state.score)
     },
     decrement: (state) => {
       state.score -= 1;
@@ -31,4 +30,9 @@ export const gameSlice = createSlice({
 export default gameSlice.reducer;
 
 // Action creators are generated for each case reducer function
-export const { setPlayer1, setPlayer2, increment, decrement } = gameSlice.actions;
+export const {
+  setPlayer1,
+  setPlayer2,
+  increment,
+  decrement,
+} = gameSlice.actions;

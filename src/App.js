@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { setPlayer1, setPlayer2, setScreen } from './gameSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import Referee from './Referee';
+import Replay from './Replay';
 
 function App() {
   const screen = useSelector((state) => state.game.screen);
@@ -18,7 +19,8 @@ function App() {
       <TopScore />
       <CompContainer />
       <HandContainer />
-      <Referee/>
+      <Referee />
+      <Replay />
     </div>
   );
 }

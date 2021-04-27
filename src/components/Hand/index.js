@@ -11,7 +11,7 @@ export default function Hand(props) {
 
   const handleClick = (event) => {
     event.preventDefault();
-    console.log("clickedevent",event)
+    // console.log("clickedevent",event)
     onHandClick(shape);
   };
   

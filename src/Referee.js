@@ -22,15 +22,14 @@ const Referee = () => {
     }
     if ((userHand == 'paper') & (compHand == 'rock')) {
       setOutcome('YOU WIN');
-      dispatch(increment());;
+      dispatch(increment());
     }
     if ((userHand == 'rock') & (compHand == 'scissors')) {
       setOutcome('YOU WIN');
-      dispatch(increment());;
+      dispatch(increment());
     }
     if (userHand === compHand) {
       setOutcome('DRAW');
-      
     }
 
     if ((compHand == 'scissors') & (userHand == 'paper')) {
@@ -51,13 +50,9 @@ const Referee = () => {
 
   return (
     <div className='referee'>
-      <h1 className='youwin'>{outcome}</h1>
-      <button className='playagain'>PLAY AGAIN</button>
-      <button className='rules'>RULES</button>
-      <div className='counter1'>
-        {score}
-        {winner1}
-      </div>
+          {compHand && <h1 className='youwin'>{outcome}</h1>}
+      
+      {/* <div className='counter1'></div> */}
     </div>
   );
 };

@@ -6,19 +6,11 @@ import { useState } from 'react';
 
 function HandContainer(props) {
   const screen = useSelector((state) => state.navigation.screen);
-
   const dispatch = useDispatch();
-
-  // const [display, setDisplay] = useState(true);
-  // console.log('display', display);
-
   const onHandClick = (newShape) => {
     dispatch(setPlayer1(newShape));
-    setTimeout(() => dispatch(setPlayer2()),1000);
+    setTimeout(() => dispatch(setPlayer2()), 1000);
     dispatch(setScreen('competition'));
-    // dispatch(setScreen("start"))
-
-    // Dispatch screen change
   };
 
   if (screen !== 'start') return null;

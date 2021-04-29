@@ -4,8 +4,10 @@ import rules2 from './images/image-rules.svg';
 import { useState } from 'react';
 
 const Instructions = () => {
+  const startscreen1 = useSelector((state) => state.navigation.screen);
   const [showImage, setShowImage] = useState(null);
-  const toggleImage = () => setShowImage(!showImage);
+    const toggleImage = () => setShowImage(!showImage);
+    
   return (
     <>
       {showImage && (
@@ -28,19 +30,19 @@ const Instructions = () => {
 };
 
 const Replay = () => {
-  const compHand = useSelector((state) => state.game.player2);
+    const compHand = useSelector((state) => state.game.player2);
+    const startscreen1 = useSelector((state) => state.navigation.screen);
   const dispatch = useDispatch();
 
   return (
     <div>
-      {compHand && (
-        <button
-          className='playagain'
-          onClick={() => dispatch(setScreen('start'))}>
-          PLAY AGAIN
-        </button>
+      {startscreen1=="competition" && compHand && (
+      <button
+        className='playagain'
+        onClick={() => dispatch(setScreen('start'))}>
+        PLAY AGAIN
+      </button>
       )}
-
       {true && <Instructions />}
     </div>
   );

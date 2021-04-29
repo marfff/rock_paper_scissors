@@ -4,8 +4,9 @@ import { increment, decrement } from './gameSlice';
 
 const Referee = () => {
   const compHand = useSelector((state) => state.game.player2);
-  const userHand = useSelector((state) => state.game.player1);
-  console.log('HANDS', userHand, compHand);
+    const userHand = useSelector((state) => state.game.player1);
+    const startscreen = useSelector((state) => state.navigation.screen);
+//   console.log('HANDS', userHand, compHand);
 
   const dispatch = useDispatch();
   const [outcome, setOutcome] = useState('?');
@@ -43,7 +44,7 @@ const Referee = () => {
 
   return (
     <div className='referee'>
-      {compHand && <h1 className='youwin'>{outcome}</h1>}
+      {startscreen==="competition" && compHand && <h1 className='youwin'>{outcome}</h1>}
 
     </div>
   );

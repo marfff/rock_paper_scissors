@@ -103,7 +103,6 @@
 
 .comp1 {
   display: flex;
-  /* background: orange; */
   justify-content: space-between;
 }
 
@@ -171,13 +170,6 @@
   background: rgba(0, 0, 0, 0.1);
   z-index: 100;
 }
-
-/* border: 1px #ff0000 solid;
-  animation: blink 1s;
-  animation-iteration-count: 3;
-
-
-@keyframes blink { 50% { border-color:#fff ; }  } */
 
 .youpicked,
 .housepicked {
@@ -279,8 +271,6 @@
   position: absolute;
   font-size: 16px;
   top: 113px;
-  /* width: 305px;
-  height: 271px; */
   margin-left: 35px;
   margin-right: 35px;
 }

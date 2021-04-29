@@ -74,7 +74,7 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  margin-top: 105px;
+  margin-top: 30px;
   height: 200px;
   margin-left: 32px;
   margin-right: 32px;
@@ -87,7 +87,7 @@
 
 .competition {
   display: flex;
-  margin-top: 105px;
+  margin-top: 32px;
   height: 200px;
   margin-left: 32px;
   margin-right: 32px;
@@ -103,6 +103,7 @@
 
 .comp1 {
   display: flex;
+  /* background: orange; */
   justify-content: space-between;
 }
 
@@ -112,6 +113,14 @@
   width: 60%;
   margin: 20%;
   z-index: 1;
+
+  /* margin-left:20%; */
+  /* right:20%;
+  left:20%;
+  
+  justify-content: center;
+  align-items: center;
+  /* background-size: 50%; */
 }
 
 .handstop {
@@ -171,6 +180,13 @@
   z-index: 100;
 }
 
+/* border: 1px #ff0000 solid;
+  animation: blink 1s;
+  animation-iteration-count: 3;
+
+
+@keyframes blink { 50% { border-color:#fff ; }  } */
+
 .youpicked,
 .housepicked {
   display: flex;
@@ -228,7 +244,7 @@
   height: 40px;
   color: white;
   font-weight: 400;
-  top: 180px;
+  top: 120px;
   justify-content: center;
   align-items: center;
   margin-left: auto;
@@ -271,6 +287,8 @@
   position: absolute;
   font-size: 16px;
   top: 113px;
+  /* width: 305px;
+  height: 271px; */
   margin-left: 35px;
   margin-right: 35px;
 }
